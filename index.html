@@ -1,31 +1,167 @@
 <!DOCTYPE html>
 <html lang="en-gb">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Work Day Scheduler</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-  <title>Work Day Scheduler</title>
-</head>
+  <body>
+    <header>
+      <h1 class="display-3">Work Day Scheduler</h1>
+      <p class="lead">
+        A simple calendar app for scheduling your work day: 9am-7pm
+      </p>
+      <p id="currentDay" class="lead"></p>
+    </header>
+    <div class="container mt-3">
+      <!-- Timeblocks go here -->
+      <!-- 9am-->
+      <div class="time-block row">
+        <div class="col-1 hour"><div class="text-end">9am</div></div>
 
-<body>
-  <header>
-    <h1 class="display-3">Work Day Scheduler</h1>
-    <p class="lead">A simple calendar app for scheduling your work day</p>
-    <p id="currentDay" class="lead"></p>
-  </header>
-  <div class="container">
-    <!-- Timeblocks go here -->
-  </div>
+        <textarea
+          class="description col-10"
+          placeholder="new event"
+          id="9"
+        ></textarea>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
-</body>
+        <button class="saveBtn col-1">Save</button>
+      </div>
+      <!-- 10am-->
+      <div class="time-block row">
+        <div class="col-1 hour"><div class="text-end">10am</div></div>
+        <textarea
+          class="description col-10"
+          placeholder="new event"
+          id="10"
+        ></textarea>
 
+        <button class="saveBtn col-1">Save</button>
+      </div>
+      <!-- 11am-->
+      <div class="time-block row">
+        <div class="col-1 hour"><div class="text-end">11am</div></div>
+        <textarea
+          class="description col-10"
+          placeholder="new event"
+          id="11"
+        ></textarea>
+
+        <button class="saveBtn col-1">Save</button>
+      </div>
+      <!-- 12am-->
+      <div class="time-block row">
+        <div class="col-1 hour"><div class="text-end">12 noon</div></div>
+        <textarea
+          class="description col-10"
+          placeholder="new event"
+          id="12"
+        ></textarea>
+
+        <button class="saveBtn col-1">Save</button>
+      </div>
+      <!-- 1pm-->
+      <div class="time-block row">
+        <div class="col-1 hour"><div class="text-end">1pm</div></div>
+        <textarea
+          class="description col-10"
+          placeholder="new event"
+          id="13"
+        ></textarea>
+
+        <button class="saveBtn col-1">Save</button>
+      </div>
+      <!-- 2pm-->
+      <div class="time-block row">
+        <div class="col-1 hour"><div class="text-end">2pm</div></div>
+        <textarea
+          class="description col-10"
+          placeholder="new event"
+          id="14"
+        ></textarea>
+
+        <button class="saveBtn col-1">Save</button>
+      </div>
+      <!-- 3pm-->
+      <div class="time-block row">
+        <div class="col-1 hour"><div class="text-end">3pm</div></div>
+        <textarea
+          class="description col-10"
+          placeholder="new event"
+          id="15"
+        ></textarea>
+
+        <button class="saveBtn col-1">Save</button>
+      </div>
+      <!-- 4pm-->
+      <div class="time-block row">
+        <div class="col-1 hour"><div class="text-end">4pm</div></div>
+        <textarea
+          class="description col-10"
+          placeholder="new event"
+          id="16"
+        ></textarea>
+
+        <button class="saveBtn col-1">Save</button>
+      </div>
+      <!-- 5pm-->
+      <div class="time-block row">
+        <div class="col-1 hour"><div class="text-end">5pm</div></div>
+        <textarea
+          class="description col-10"
+          placeholder="new event"
+          id="17"
+        ></textarea>
+
+        <button class="saveBtn col-1">Save</button>
+      </div>
+      <!-- 6pm-->
+      <div class="time-block row">
+        <div class="col-1 hour"><div class="text-end">6pm</div></div>
+        <textarea
+          class="description col-10"
+          placeholder="new event"
+          id="18"
+        ></textarea>
+
+        <button class="saveBtn col-1">Save</button>
+      </div>
+      <!-- 7pm-->
+      <div class="time-block row">
+        <div class="col-1 hour"><div class="text-end">7pm</div></div>
+        <textarea
+          class="description col-10"
+          placeholder="new event"
+          id="19"
+        ></textarea>
+
+        <button class="saveBtn col-1">Save</button>
+      </div>
+    </div>
+
+    <!-- included new script for JD code -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
