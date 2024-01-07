@@ -39,7 +39,7 @@ if (availableEvents) {
 }
 
 $(".container").on("click", "button.saveBtn", function () {
-  alert("button is pressed");
+  alert("Saving event");
 
   // get the detail of the event to be stored
   let eventDetail = $(this).prev().val();
