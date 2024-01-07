@@ -1,17 +1,14 @@
-// test out day.js
+// Get current date
 
 let currentDate = dayjs();
 let formatCurrentDate = currentDate.format("dddd DD MMMM");
-//let currentHour = currentDate.hour();
-
-let currentHour = 13;
+let currentHour = currentDate.hour();
+//let currentHour = 8;
 
 $("#currentDay").text(formatCurrentDate);
 
 // set the colour of the each calendar event box
 function setEventColor() {
-  console.log(typeof currentHour);
-
   $(".description").each(function () {
     let hourEvent = $(this).attr("id");
 
@@ -28,11 +25,18 @@ function setEventColor() {
 
 setEventColor();
 
-// make sure the current hour is updated
-// setInterval - query around the this.keyword when I tested it
+// Pull back saved events & display them.
 
-// add item to local storage
-// check on event delegation decision - not required because we are
+let availableEvents = JSON.parse(localStorage.getItem("dailyCalendarEvents"));
+if (availableEvents) {
+  console.log(availableEvents);
+
+  for (let i = 0; i < availableEvents.length; i++) {
+    eventTime = parseInt(availableEvents[i].eventHour);
+    eventdetails = availableEvents[i].eventText;
+    $("#" + eventTime).val(eventdetails);
+  }
+}
 
 $(".container").on("click", "button.saveBtn", function () {
   alert("button is pressed");
