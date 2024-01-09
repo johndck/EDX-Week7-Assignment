@@ -7,7 +7,8 @@ $("#currentDay").text(formatCurrentDate);
 
 // set the colour of the each calendar event box
 function setEventColor() {
-  let currentHour = currentDate.hour();
+  //let currentHour = currentDate.hour();
+  currentHour = 15;
 
   $(".description").each(function () {
     let hourEvent = $(this).attr("id");
