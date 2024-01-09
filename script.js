@@ -51,9 +51,6 @@ $(".container").on("click", "button.saveBtn", function () {
   // check that we are getting the right information
   console.log(eventDetail);
   console.log(eventID);
-  //console.log($("#17").val());
-
-  //$("#18").val("Add this into the area");
 
   // check if any events exist in local storage
 
