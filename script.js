@@ -2,13 +2,13 @@
 
 let currentDate = dayjs();
 let formatCurrentDate = currentDate.format("dddd DD MMMM");
-let currentHour = currentDate.hour();
-//let currentHour = 8;
 
 $("#currentDay").text(formatCurrentDate);
 
 // set the colour of the each calendar event box
 function setEventColor() {
+  let currentHour = currentDate.hour();
+
   $(".description").each(function () {
     let hourEvent = $(this).attr("id");
 
@@ -38,9 +38,11 @@ if (availableEvents) {
   }
 }
 
-$(".container").on("click", "button.saveBtn", function () {
-  alert("Saving event");
+// Repeat the setEventColor every 5 seconds
 
+setInterval(setEventColor, 5000);
+
+$(".container").on("click", "button.saveBtn", function () {
   // get the detail of the event to be stored
   let eventDetail = $(this).prev().val();
   // get the ID of the event row
